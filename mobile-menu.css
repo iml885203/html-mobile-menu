@@ -1,115 +1,25 @@
-/*================*/
-/*mobile menu=====*/
-/*================*/
-.mobile-menu {
-  width: 50%;
-  height: 100%;
-  background-color: #ececec;
+.header {
   position: fixed;
-  left: 100%;
+  height: 100%;
+  width: 100%;
   z-index: 100;
-  opacity: 0;
-  transition: 0.5s;
-  top: 0;
-}
-.mobile-menu .title {
-  color: #fd8b8c;
-  padding: 1.3em;
-  margin-right: 20%;
-  transition: 0.5s;
-  margin-right: 3em;
-  display: inline-block;
-  border-bottom: #fd8b8c 1px solid;
-}
-.mobile-menu ul {
-  padding: 0;
-}
-.mobile-menu ul li {
-  list-style-type: none;
-  color: #fd8b8c;
-  padding: 1.3em;
-  cursor: pointer;
-  transition: 0.5s;
-  margin-right: 20%;
-}
-.mobile-menu ul li.active {
-  background-color: #fd8b8c;
-  color: white;
-  position: relative;
-  pointer-events: none;
-}
-.mobile-menu ul li.active:after {
-  content: '';
-  position: absolute;
-  right: -13%;
-  width: 1em;
-  height: 1em;
-  border-top: rgba(0, 0, 0, 0) 0.5em solid;
-  border-bottom: rgba(0, 0, 0, 0) 0.5em solid;
-  border-right: #fd8b8c 1em solid;
-  box-sizing: border-box;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-}
-.mobile-menu ul li:active {
-  pointer-events: auto !important;
 }
 /*================*/
 /*mobile button===*/
 /*================*/
-.header .menu {
+.mobile-menu-button {
   display: inline-block;
-  z-index: 101;
-}
-.header .menu ul li {
-  list-style-type: none;
-  float: left;
-  color: #fd8b8c;
-  padding: 0.7em;
-  cursor: pointer;
-  transition: 0.5s;
-  position: relative;
-}
-.header .menu ul li::after {
-  background-color: #fd8b8c;
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  display: block;
-  top: 50%;
-  right: 0;
-  bottom: 0;
-  left: 50%;
-  transition: 0.5s;
-  z-index: -1;
-}
-.header .menu ul li.active {
-  z-index: 0;
-  color: white;
-  pointer-events: none;
-}
-.header .menu ul li.active::after {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.header .menu ul li:active {
-  pointer-events: auto !important;
-}
-.header .menu .mobile-menu-button {
-  display: none;
   transition: all 0.3s;
   background-color: rgba(0, 0, 0, 0);
-  position: relative;
+  position: fixed;
   z-index: 100;
   height: 3em;
   width: 3em;
+  top: 1em;
+  right: 1em;
 }
-.header .menu .mobile-menu-button .bar {
-  background-color: #fd8b8c;
+.mobile-menu-button .bar {
+  background-color: black;
   height: 3px;
   width: 2em;
   margin: auto;
@@ -121,9 +31,9 @@
   right: 0;
   bottom: 0;
 }
-.header .menu .mobile-menu-button .bar:before,
-.header .menu .mobile-menu-button .bar:after {
-  background-color: #fd8b8c;
+.mobile-menu-button .bar:before,
+.mobile-menu-button .bar:after {
+  background-color: black;
   height: 3px;
   width: 2em;
   margin-bottom: 5px;
@@ -135,45 +45,48 @@
   -moz-transition-property: top, transform;
   -webkit-transition-property: top, transform;
 }
-.header .menu .mobile-menu-button.effect .bar:before,
-.header .menu .mobile-menu-button.effect .bar:after {
+.mobile-menu-button.effect .bar:before,
+.mobile-menu-button.effect .bar:after {
   transition-delay: 0s,0.3s;
 }
-.header .menu .mobile-menu-button.effect .bar:before {
+.mobile-menu-button.effect .bar:before {
   top: -10px;
 }
-.header .menu .mobile-menu-button.effect .bar:after {
+.mobile-menu-button.effect .bar:after {
   top: 10px;
 }
-.header .menu .mobile-menu-button.active .bar {
+.mobile-menu-button.active .bar {
   background-color: rgba(0, 0, 0, 0);
 }
-.header .menu .mobile-menu-button.active .bar:before,
-.header .menu .mobile-menu-button.active .bar:after {
+.mobile-menu-button.active .bar:before,
+.mobile-menu-button.active .bar:after {
   top: 0;
   transition-delay: 0s,0.3s;
 }
-.header .menu .mobile-menu-button.active .bar:before {
+.mobile-menu-button.active .bar:before {
   transform: rotate(45deg);
 }
-.header .menu .mobile-menu-button.active .bar:after {
+.mobile-menu-button.active .bar:after {
   transform: rotate(-45deg);
 }
-@media only screen and (max-width: 768px) {
-  .header {
-    align-items: center;
-  }
-  .header .menu ul {
-    display: none;
-  }
-  .header .menu .mobile-menu-button {
-    display: block;
-  }
+/*================*/
+/*mobile menu=====*/
+/*================*/
+.mobile-menu {
+  width: 100%;
+  height: 100%;
+  background-color: #ececec;
+  position: fixed;
+  left: 100%;
+  z-index: 99;
+  opacity: 0;
+  transition: 0.5s;
+  top: 0;
 }
 /*================*/
-/*veil=====*/
+/*veil============*/
 /*================*/
-body .veil {
+.veil {
   display: none;
   content: '';
   position: fixed;
