@@ -1,3 +1,6 @@
+/*================*/
+/*mobile menu=====*/
+/*================*/
 .mobile-menu {
   width: 50%;
   height: 100%;
@@ -52,7 +55,9 @@
 .mobile-menu ul li:active {
   pointer-events: auto !important;
 }
-
+/*================*/
+/*mobile button===*/
+/*================*/
 .header .menu {
   display: inline-block;
   z-index: 101;
@@ -165,7 +170,9 @@
     display: block;
   }
 }
-
+/*================*/
+/*veil=====*/
+/*================*/
 body .veil {
   display: none;
   content: '';
